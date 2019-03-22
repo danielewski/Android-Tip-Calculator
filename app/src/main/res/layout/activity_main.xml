@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.taylordanielewski.tipcalculator.MainActivity"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="133dp"
+        android:layout_marginStart="133dp"
         android:layout_marginTop="347dp"
         android:text="Custom Tip:"
         android:textAppearance="@android:style/TextAppearance.Large"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="133dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -28,8 +28,8 @@
         android:text="Service:"
         android:textAppearance="@android:style/TextAppearance.Large"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -39,113 +39,129 @@
         android:text="Check Price:"
         android:textAppearance="@android:style/TextAppearance.Large"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
         android:text="Tip:"
         android:textAppearance="@android:style/TextAppearance.Large"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="29dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
         android:id="@+id/customTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="mealPrice"
+        android:hint="Custom Percentage"
         android:inputType="numberDecimal"
-        android:text="Enter Tip %"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintBottom_toTopOf="@+id/customBtn"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/customBtn"
-        tools:layout_constraintLeft_creator="1" />
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="28dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="65dp"
+        android:layout_marginStart="260dp"
+        />
+
 
     <EditText
         android:id="@+id/checkTot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
         android:ems="10"
-        android:hint="mealPrice"
+        android:hint="Bill Total"
         android:inputType="numberDecimal"
-        android:text="Check Total"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
-        android:layout_marginBottom="13dp" />
-
-    <Button
-        android:id="@+id/greatBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="268dp"
-        android:layout_marginRight="8dp"
-        android:text="Great"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="268dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/goodBtn"
-        tools:layout_constraintBaseline_creator="1" />
+        tools:layout_constraintBottom_creator="1" />
 
-    <Button
-        android:id="@+id/customBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
-        android:text="Calculate Custom"
-        app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="110dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="36dp" />
-
-    <Button
-        android:id="@+id/goodBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Good"
-        app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/badBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
-        android:text="Poor"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="28dp"
+        android:text="Poor"
         app:layout_constraintBaseline_toBaselineOf="@+id/goodBtn"
+        app:layout_constraintLeft_toRightOf="parent"
         tools:layout_constraintBaseline_creator="1" />
+
+    <Button
+        android:id="@+id/goodBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Good"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/greatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginLeft="244dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginStart="244dp"
+        android:text="Great"
+        app:layout_constraintBaseline_toBaselineOf="@+id/goodBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBaseline_creator="1" />
+
+    <Button
+        android:id="@+id/customBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Custom"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1" />
+
 
     <TextView
         android:id="@+id/tipTot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        android:layout_marginBottom="21dp" />
+        tools:layout_constraintBottom_creator="1" />
 
 </android.support.constraint.ConstraintLayout>
